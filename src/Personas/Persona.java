@@ -8,7 +8,7 @@ public class Persona {
 	public Persona(String n, int e) {
 		this.nombre = n;
 		this.edad = e;
-		this.npersonas++;
+		npersonas++;
 	}
 
 	public int getEdad() {
@@ -23,7 +23,7 @@ public class Persona {
 		this.nombre = nuevo;
 	}
 
-	public void cumpleaños() {
+	public void cumpleaÃ±os() {
 		this.edad++;
 		System.out.println("Fiesta de " + this.nombre);
 	}

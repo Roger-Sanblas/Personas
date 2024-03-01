@@ -86,7 +86,7 @@ public class Main {
 		return j;
 	}
 
-	private static boolean AñadirAlumno(Persona[] personas, Scanner sc) {
+	private static boolean AÃ±adirAlumno(Persona[] personas, Scanner sc) {
 		int pos, edad, numMaterias;
 		boolean res;
 		String nombre, modulo;
@@ -115,7 +115,6 @@ public class Main {
 		}
 		return res;
 	}
-	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -130,42 +129,43 @@ public class Main {
 			System.out.println("Dime el numero maximo de personas");
 			maxpersonas = sc.nextInt();
 		} while (maxpersonas <= 0);
-		
+
 		personas = new Persona[maxpersonas];
-		edades = new int{maxpersonas];
-		
+		edades = new int[maxpersonas];
+
 		do {
 			opcion = menu(sc);
 			switch (opcion) {
-			case 'A':
-				MostrarPersonas(personas);
-				break;
-			case 'C':
-				aux = AñadirAlumno(personas, sc);
-				String mensaje = (aux ? "Se logro agregar el alumno" : "No Se logro agregar el alumno");
-				System.out.println(mensaje);
-				break;
-			case 'H':
-				System.out.println("hay " + contarNpersonas(personas) + " personas");
-				break;
-			case 'I':
-				System.out.println("Se han creado" + Profesor.getNprofesor() + " profesores");
-				break;
-			case 'J':
-				System.out.println("Se han creado" + Alumno.getNalumno() + " alumnoss");
-				break;
-			case 'K':
-				System.out.println("Numero de Repetidores " + contarNrepetidores(personas) + " alumnos");
-			case 'L':
-				System.out.println("Total de Profesores Majos " + contarNrepetidores(personas) + " profesores");
-			case 'O':
-				nedades = ObtenerEdadesAlumnosDAW(personas, edades);
-			case 'Z':
-				break;
-			default:
-				System.out.println("Opcion Incorrecta.");
+				case 'A':
+					MostrarPersonas(personas);
+					break;
+				case 'C':
+					aux = AÃ±adirAlumno(personas, sc);
+					String mensaje = (aux ? "Se logro agregar el alumno" : "No Se logro agregar el alumno");
+					System.out.println(mensaje);
+					break;
+				case 'H':
+					System.out.println("hay " + contarNpersonas(personas) + " personas");
+					break;
+				case 'I':
+					System.out.println("Se han creado" + Profesor.getNprofesor() + " profesores");
+					break;
+				case 'J':
+					System.out.println("Se han creado" + Alumno.getNalumno() + " alumnoss");
+					break;
+				case 'K':
+					System.out.println("Numero de Repetidores " + contarNrepetidores(personas) + " alumnos");
+				case 'L':
+					System.out.println("Total de Profesores Majos " + contarNrepetidores(personas) + " profesores");
+				case 'O':
+					nedades = ObtenerEdadesAlumnosDAW(personas, edades);
+				case 'Z':
+					break;
+				default:
+					System.out.println("Opcion Incorrecta.");
 			}
 		} while (opcion != 'Z');
-		
+
 		MostrarPersonas(personas);
+	}
 }
